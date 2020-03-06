@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
+use App\car;
 class CarController extends Controller
 {
     //
     public function create(Request $request){
-        $make=$request['make'];
-        $model=$request['model'];
-        $produced_on=$request['produced_on'];
+        $make=$request->make;
+        $model=$request->model;
+        $produced_on=$request->produced_on;
         
         $car=new car();
 

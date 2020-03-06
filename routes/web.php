@@ -17,7 +17,4 @@ Route::get('/', function () {
 Route::get('car',function(){
     return view('cars');
 });
-Route::post('create',[
-'uses'=>'CarController@create',
-'as'=>'cars.create'
-]);
+Route::post('create','CarController@create')->name('cars.create');
